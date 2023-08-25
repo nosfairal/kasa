@@ -8,8 +8,8 @@ const Slider = (images) => {
     const pictures = images.images;
     const slideLength = pictures.length;
 
-    let actualImage;
-    actualImage = pictures[counter];
+    let currentImage;
+    currentImage = pictures[counter];
 
     const slideLeft = () => {
         setCounter((counter - 1 + slideLength) % slideLength);
@@ -23,7 +23,7 @@ const Slider = (images) => {
 
     return (
         <div className="slider-container">
-            <img className="slider-img" src={actualImage} alt="chambre d'un hôte" />
+            <img className="slider-img" src={currentImage} alt="chambre d'un hôte" />
             <div className="sup-container">
                 <img
                     onClick={slideLeft}
