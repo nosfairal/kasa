@@ -16,22 +16,23 @@ const Rating = () => {
             <img
                 src={starFull}
                 alt="note sur 5"
-                key={i}
+                key={`filled-${i}`}
                 className="star filled-star"
             />
         );
     }
-    return (
-        <div className="accomodation-stars">
-            <div className=" empty-star-container">
-                <img src={starsEmpty} alt="pas de note" className="star empty-star" />
-                <img src={starsEmpty} alt="pas de note" className="star empty-star" />
-                <img src={starsEmpty} alt="pas de note" className="star empty-star" />
-                <img src={starsEmpty} alt="pas de note" className="star empty-star" />
-                <img src={starsEmpty} alt="pas de note" className="star empty-star" />
-            </div>
-            <div className=" filled-star-container "> {stars}</div>
-        </div>
-    );
+
+    for (let i = numberStars; i < 5; i++) {
+        stars.push(
+            <img
+                src={starsEmpty}
+                alt="note sur 5"
+                key={`empty-${i}`}
+                className="star empty-star"
+            />
+        );
+    }
+
+    return <div className="accomodation-stars">{stars}</div>;
 };
 export default Rating;

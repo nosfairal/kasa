@@ -6,7 +6,7 @@ import Mountain from "../assets/images/Mountain.svg";
 const About = () => {
     return (
         <div className="about-container">
-            <img className="moutain" src={Mountain} alt=" montagne" />
+            <img className="mountain" src={Mountain} alt=" montagne" />
             <div className="about-collapse-container">
                 <Collapse
                     state={{
