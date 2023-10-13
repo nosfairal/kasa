@@ -2,11 +2,17 @@ import React from "react";
 import "../style/About.css";
 import Collapse from "../components/collapse";
 import Mountain from "../assets/images/Mountain.svg";
+import Banner from "../components/banner";
 
 const About = () => {
     return (
         <div className="about-container">
-            <img className="mountain" src={Mountain} alt=" montagne" />
+            <Banner
+                imageSrc={Mountain}
+                altText="Image de montagne"
+                bannerText=""
+                style={{ height: "211px" }}
+            />
             <div className="about-collapse-container">
                 <Collapse
                     state={{

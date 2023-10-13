@@ -4,11 +4,22 @@ import "../style/Home.css";
 import Banner from "../components/banner";
 import Card from "../components/card";
 import data from "../data/logements.json";
+import Cliff from "../assets/images/Cliff.svg";
 
 const Home = () => {
     return (
         <div className="home-container">
-            <Banner />
+            <Banner
+                imageSrc={Cliff}
+                altText="Falaise Kasa"
+                bannerText={
+                    <>
+                        Chez vous,
+                        <span className="line-break"></span>
+                        partout et ailleurs
+                    </>
+                }
+            />
             <div className="home-card-container">
                 <ul>
                     {data.map((acc) => {
@@ -30,4 +41,5 @@ const Home = () => {
         </div>
     );
 };
+
 export default Home;
