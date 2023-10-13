@@ -59,7 +59,7 @@ const Accomodation = () => {
                                 <Collapse
                                     state={{
                                         title: "Description",
-                                        description: dataAccomodation[0].description,
+                                        description: data.description,
                                     }}
                                 />
                             )}
@@ -70,7 +70,7 @@ const Accomodation = () => {
                                 <Collapse
                                     state={{
                                         title: "Equipments",
-                                        equipments: dataAccomodation[0].equipments,
+                                        equipments: data.equipments,
                                     }}
                                 />
                             )}
