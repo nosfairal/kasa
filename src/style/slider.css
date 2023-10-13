@@ -11,6 +11,8 @@
     width: 46px;
     height: 79.2px;
     cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .arrow-left {

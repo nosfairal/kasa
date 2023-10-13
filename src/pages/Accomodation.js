@@ -17,6 +17,9 @@ const Accomodation = () => {
             navigate("/error");
         }
     }, [data, navigate]);
+    if (!data) {
+        return null;
+    }
 
     return (
         <div className="accomodation-container">
